@@ -1,0 +1,31 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <% include ../views/partials/head %>
+    </head>
+    <body class="container">
+
+        <header>
+              <% include ../views/partials/aboutHeader.ejs %>
+        </header>
+
+        <sideBar>
+                <% include ../views/partials/sideBar.ejs %>
+        </sideBar>
+
+        <main>
+            <div class="jumbotron"
+                <h1> About Me </h1>
+                <p> Text </p>
+                <% include ../views/partials/jumboAbout.ejs %>
+            </div>
+        </main>
+
+        <footer>
+            <% include ../views/partials/footer.ejs %>
+        </footer>
+    </body>
+    </html>

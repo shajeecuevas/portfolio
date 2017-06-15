@@ -1,0 +1,32 @@
+.nav-fix{
+    padding-left: 15px;
+}
+.row-height {
+    height: 70px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.mid-text{
+    height: 70px;
+    text-indent: 50px;
+    padding-top: 15px;
+}
+
+.col-md-2 {
+    background-color: #696969;
+    border-radius: 15px 0 0 15px;
+    height: 500px;
+    padding-left: 28px;
+}
+
+.col-md-8 {
+    background-color: #e3e3e3;
+    border-radius: 0 0 0 0; 
+    height: 500px;
+    padding-left: 28px;
+}
+
+.jumbotron{
+    height: 500px;
+}
