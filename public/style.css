@@ -30,3 +30,11 @@
 .jumbotron{
     height: 500px;
 }
+
+#post{
+    margin-top: 25px;
+    margin-left: 350px;
+}
+#home-paragraph {
+    text-indent: 50px;
+}

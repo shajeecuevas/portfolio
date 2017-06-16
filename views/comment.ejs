@@ -1,0 +1,61 @@
+<!-- views/comment.ejs -->
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="functions.js"></script>
+        <% include ../views/partials/head %>
+        <style>
+            div.title {
+                max-width:700px;
+                margin: auto;
+            }
+
+            div.txtarea {
+                max-width:700px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body class="container">
+
+        <header>
+              <% include ../views/partials/commentHeader.ejs %>
+              <!-- <% include ../views/partials/defaultHeader.ejs %> -->
+        </header>
+
+        <sideBar>
+                <% include ../views/partials/sideBar.ejs %>
+        </sideBar>
+
+        <main>
+            <div class="jumbotron"
+                <form>
+
+                    <div class="form-group title">
+                        <label for="exampleInputEmail1">Title</label>
+                        <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="What's on your mind...?">
+                    </div>
+
+                    <br><br>
+
+                    <div class="form-group txtarea">
+                        <label for="exampleTextarea">Blog Post</label>
+                        <textarea class="form-control" id="text" rows="3"></textarea>
+                    </div>
+
+                </form>
+                <button type="button" id="post" class="btn btn-primary btn-lg" placeholder="Type your thoughts here..." onclick="submitBlog()">Post</button> <br>
+                <!--<button onclick="submitBlog"> Submit </button> -->
+            </div>
+        </main>
+
+        <footer>
+            <% include ../views/partials/footer.ejs %>
+        </footer>
+    </body>
+    </html>

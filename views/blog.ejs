@@ -1,0 +1,46 @@
+<!-- views/blog.ejs -->
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="functions.js"></script>
+        <% include ../views/partials/head %>
+
+    </head>
+    <body class="container">
+
+        <header>
+             <% include ../views/partials/blogHeader.ejs %>
+              <!--<% include ../views/partials/defaultHeader.ejs %> -->
+        </header>
+
+        <sideBar>
+                <% include ../views/partials/sideBar.ejs %>
+        </sideBar>
+
+        <main>
+            <div class="jumbotron">
+
+                <% data = data.reverse(); if(data){for(i = 0; i <data.length; i++){ %>
+
+                <div>
+                    <p> <%= data[i].title %> </p>
+                    <p> <%= data[i].blogtext%> </p>
+                </div>
+
+                <% } } %>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <% include ../views/partials/footer.ejs %>
+        </footer>
+
+    </body>
+    </html>
