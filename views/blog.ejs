@@ -23,18 +23,38 @@
         </sideBar>
 
         <main>
-            <div class="jumbotron">
+
+            <div class = "col-md-8 row-height padding-0">
+                    <div class = "column-middle padding-0">
+                        <% data = data.reverse(); if(data){for(i = 0; i <data.length; i++){ %>
+
+                            <div>
+                                <p> Title: <%= data[i].title %> </p>
+                                <p> Text: <%= data[i].blogtext%> </p>
+                            </div>
+
+                              <% } } %>
+
+                    </div>
+                </div>
+
+                <div class = "col-md-2 row-height padding-0">
+                    <div class = "column-right padding-0">
+                        This should be col-md-2
+                    </div>
+                </div>
+            <!--<div class="jumbotron">
 
                 <% data = data.reverse(); if(data){for(i = 0; i <data.length; i++){ %>
 
                 <div>
-                    <p> <%= data[i].title %> </p>
-                    <p> <%= data[i].blogtext%> </p>
+                    <p> Title: <%= data[i].title %> </p>
+                    <p> Text: <%= data[i].blogtext%> </p>
                 </div>
 
                 <% } } %>
 
-            </div>
+            </div>-->
 
         </main>
 

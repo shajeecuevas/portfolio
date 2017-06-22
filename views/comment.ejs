@@ -33,26 +33,37 @@
         </sideBar>
 
         <main>
-            <div class="jumbotron"
-                <form>
+            <div class = "col-md-8 row-height padding-0">
+                    <div class = "column-middle padding-0">
+                        <form>
 
-                    <div class="form-group title">
-                        <label for="exampleInputEmail1">Title</label>
-                        <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="What's on your mind...?">
-                    </div>
+                            <div class="form-group title">
+                                <label for="exampleInputEmail1">Title</label>
+                                <input type="email" class="form-control" id="title" aria-describedby="emailHelp" placeholder="What's on your mind...?">
+                            </div>
 
-                    <br><br>
+                            <br><br>
 
-                    <div class="form-group txtarea">
-                        <label for="exampleTextarea">Blog Post</label>
-                        <textarea class="form-control" id="text" rows="3"></textarea>
-                    </div>
+                            <div class="form-group txtarea">
+                                <label for="exampleTextarea">Blog Post</label>
+                                <textarea class="form-control" id="text" rows="3"></textarea>
+                            </div>
 
-                </form>
+                        </form>
                 <button type="button" id="post" class="btn btn-primary btn-lg" placeholder="Type your thoughts here..." onclick="submitBlog()">Post</button> <br>
                 <!--<button onclick="submitBlog"> Submit </button> -->
+                </div>
             </div>
+            <div class = "col-md-2 row-height padding-0">
+                    <div class = "column-right padding-0">
+                        This should be col-md-2
+                    </div>
+                </div>
         </main>
+
+        <p class="text-center text-muted">© Copyright 2017 Shajee Cuevas</p>
+        <p class="text-center text-muted"><a href="TermsofService">Terms of Service</a></p>
+
 
         <footer>
             <% include ../views/partials/footer.ejs %>

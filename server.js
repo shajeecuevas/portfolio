@@ -50,6 +50,7 @@ app.get('/comment', function(req, res){
     res.render('comment');
 });
 
+
 //blog page !!!Change this for the viewing page!!!!
 
 // app.get('/blog', function(req, res){
