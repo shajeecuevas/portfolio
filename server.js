@@ -6,8 +6,14 @@ var parser = require('body-parser');
 
 app.use(parser.json());
 //connect to the db
-var connectionString = 
-"postgres://postgres:qwerty@localhost:5432/postgres";
+var connectionString;
+if(process.env.DATABASE_URL){
+    connectionString = process.env.DATABASE_URL;
+} 
+else{
+    connectionString = "postgres://postgres:qwerty@localhost:5432/postgres";
+}
+
 var pgClient = new pg.Client(connectionString);
 pgClient.connect();
 
