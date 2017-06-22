@@ -6,6 +6,7 @@ var parser = require('body-parser');
 
 app.use(parser.json());
 //connect to the db
+
 var connectionString;
 if(process.env.DATABASE_URL){
     connectionString = process.env.DATABASE_URL;
@@ -16,6 +17,8 @@ else{
 
 var pgClient = new pg.Client(connectionString);
 pgClient.connect();
+
+pgClient.query("CREATE TABLE IF NOT EXISTS blogPosts(id SERIAL UNIQUE PRIMARY KEY, date date NOT NULL default CURRENT_DATE, title varchar(255) NOT NULL, blogtext text NOT NULL)");
 
 app.use(express.static('public'));
 
@@ -70,7 +73,6 @@ app.get('/comment', function(req, res){
 //     });
 //     //res.render('blog');
 // });
-//pgClient.query("CREATE TABLE IF NOT EXISTS blogPosts(id SERIAL UNIQUE PRIMARY KEY, date date NOT NULL default CURRENT_DATE, title varchar(255) NOT NULL, blogtext text NOT NULL)");
 
 app.post('/comment',function(req,res){
     console.log(req.body.titleD + " " + req.body.textD);
