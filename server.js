@@ -3,7 +3,9 @@ var express = require('express');
 const app = express();
 var pg = require('pg');
 var parser = require('body-parser');
+let path = require('path');
 
+app.use(express.static('public/PortfolioV2-master'));
 app.use(parser.json());
 //connect to the db
 
@@ -20,7 +22,6 @@ pgClient.connect();
 
 pgClient.query("CREATE TABLE IF NOT EXISTS blogPosts(id SERIAL UNIQUE PRIMARY KEY, date date NOT NULL default CURRENT_DATE, title varchar(255) NOT NULL, blogtext text NOT NULL)");
 
-app.use(express.static('public'));
 
 //set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -35,6 +36,10 @@ app.get('/', function(req,res){
 app.get('/about', function(req, res){
     res.render('about');
 });
+
+app.get('/portfolio', function(req, res){
+    res.sendFile(path.join(__dirname,'./public/PortfolioV2-master/index.html'));
+})
 
 app.get('/TermsofService', function(req,res){
     res.render('tos');
